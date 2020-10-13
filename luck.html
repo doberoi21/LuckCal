@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luck Calculator</title>
+    <link rel="stylesheet" type="text/css" href="Lstyle.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>CALCULATE YOUR TODAY'S LUCK</h1>
+        <form>
+            <h3> What is you date of birth??</h3>
+            <input type="date" name="dob">
+            <h3>Weekday?</h3>
+            <select id="weekday"> 
+                <option disabled selected value="0">--Choose an option--</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thrusday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+        </form>
+        <br>
+        <button type="button" id="Calculate">CALCULATE</button>
+
+    </div>
+</body>
+<script>
+    document.getElementById('Calculate').onclick = function() {
+        var WeekNum = Math.random();
+        WeekNum = WeekNum * 10;
+        WeekNum = Math.floor(WeekNum);
+        alert('Your luck out of 10 is ' + WeekNum + "/10");
+    }
+</script>
+
+</html>
